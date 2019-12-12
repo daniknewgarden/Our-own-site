@@ -14,11 +14,19 @@ a {
   margin: 0 auto;
   width: 100%; }
 
+.green {
+  background: #34A853; }
+
 .header {
   width: 100%;
   height: 100%; }
+  .header .fixed {
+    position: fixed;
+    background-color: #fff;
+    z-index: 999; }
   .header .header__menu {
     width: 100%;
+    height: 10%;
     padding: 0 calc(50% - 880px);
     padding-top: 10px;
     display: -webkit-box;
@@ -45,7 +53,9 @@ a {
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+      -ms-flex-item-align: center;
+      align-self: center; }
       .header .header__menu .menu__link .link__item .item {
         font-style: normal;
         font-weight: 600;
@@ -79,6 +89,7 @@ a {
         background: #34A853; }
   .header .header__content {
     background: url(../images/header-images/Background.svg) no-repeat;
+    background-position-y: 350%;
     height: 830px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -251,16 +262,16 @@ a {
     font-size: 35px;
     text-align: center; }
   .main .main__works .works__examples {
-    height: 655px;
+    height: 395px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .main .main__works .works__examples .examples__item {
@@ -391,6 +402,7 @@ a {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     .main__contacts .contacts__form .form__items .form__item .form__input {
+      outline: none;
       width: 100%;
       border: none;
       border-bottom: 3px solid rgba(0, 0, 0, 0.5);
@@ -402,6 +414,7 @@ a {
       line-height: 12px;
       padding: 0 5px; }
       .main__contacts .contacts__form .form__items .form__item .form__input:focus {
+        border: none;
         border-bottom: 3px solid rgba(0, 0, 0, 0.75); }
     .main__contacts .contacts__form .form__items .form__item .form__label {
       color: rgba(0, 0, 0, 0.5);
@@ -415,6 +428,7 @@ a {
       left: 5px; }
     .main__contacts .contacts__form .form__items .form__item .form__input:focus ~ .form__label,
     .main__contacts .contacts__form .form__items .form__item .form__input:not(:placeholder-shown) ~ .form__label {
+      border: none;
       font-size: 12px;
       top: -50px;
       left: 2px; }
@@ -430,3 +444,106 @@ a {
     line-height: 12px;
     border-radius: 5px;
     border: none; }
+
+.admin-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr; }
+  .admin-wrapper .sidebar {
+    height: 1080px;
+    padding: 50px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.091);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.091); }
+    .admin-wrapper .sidebar .sidebar__links {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-gap: 20px; }
+      .admin-wrapper .sidebar .sidebar__links .links__button {
+        border-radius: 5px;
+        height: 50px; }
+        .admin-wrapper .sidebar .sidebar__links .links__button .button__link {
+          background: #4285F4;
+          color: #fff;
+          text-align: center;
+          padding: 0 50px;
+          height: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .admin-wrapper .admin__content {
+    height: 1080px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .admin-wrapper .admin__content .admin__header {
+      height: 96px;
+      padding: 14px 48px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.041);
+      box-shadow: 0 0 9px rgba(0, 0, 0, 0.041); }
+      .admin-wrapper .admin__content .admin__header .header__user-logo {
+        margin: 0 0 0 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px; }
+    .admin-wrapper .admin__content .admin__main {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: 1fr 9fr;
+      grid-template-rows: 1fr 9fr;
+      grid-gap: 10%;
+      padding: 50px 190px; }
+      .admin-wrapper .admin__content .admin__main .main__title {
+        text-align: center; }
+      .admin-wrapper .admin__content .admin__main .main__table {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 2fr 2fr 1.5fr 2fr;
+        grid-template-columns: 1fr 2fr 2fr 1.5fr 2fr;
+        border: 1px solid #4285F4; }
+        .admin-wrapper .admin__content .admin__main .main__table div {
+          border: 1px solid #4285F4;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -ms-flex-line-pack: center;
+          align-content: center; }
+        .admin-wrapper .admin__content .admin__main .main__table .table__title {
+          background: rgba(196, 196, 196, 0.3);
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          height: 40px; }
+    .admin-wrapper .admin__content .admin__footer {
+      height: 300px; }
